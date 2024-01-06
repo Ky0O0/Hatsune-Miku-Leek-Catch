@@ -1,0 +1,151 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #00FFFF, #008080);
+    overflow: hidden;
+    position: relative;
+    color: white;
+}
+#loading-text{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#loading-bar{
+    width: 300px;
+    height: 20px;
+    background-color: #333;
+    position: relative;
+}
+#progress-bar{
+    height: 100%;
+    width: 0;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#game-title{
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: none;
+}
+#game-board{
+    margin-bottom: 30px;
+    display: block;
+}
+#controls{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+    display: none;
+}
+.arrow-button{
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.center-button{
+    width: 50px;
+    height: 50px;
+    visibility: hidden;
+}
+#points{
+    font-size: 20px;
+    display: none;
+}
+#points span{
+    font-weight: bold;
+    color: #FF0000;
+    animation-name: title-animation1;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes title-animation1{
+    0%{
+        color: #0D47A1;
+    }
+    25%{
+        color: #FFCC00;
+    }
+    50%{
+        color: #1B5E20;
+    }
+    75%{
+        color: #29B6F6;
+    }
+    100%{
+        color: #0D47A1;
+    }
+}
+#timer{
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: none;
+}
+.hidden{
+    display: none;
+}
+#enemy{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+#end-game{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+}
+#koncowe-punkty{
+    font-weight: bold;
+    color: #FF0000;
+    animation-name: title-animation;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes title-animation{
+    0%{
+        color: #0D47A1;
+    }
+    25%{
+        color: #FFCC00;
+    }
+    50%{
+        color: #1B5E20;
+    }
+    75%{
+        color: #29B6F6;
+    }
+    100%{
+        color: #0D47A1;
+    }
+}
+#restart-button{
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
